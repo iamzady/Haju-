@@ -5,414 +5,1162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZADY | Clothing Store</title>
+    <meta
+        name="description"
+        content="ZADY - Modern clothing for modern people."
+    >
+
+    <title>ZADY | Modern Clothing</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-    <header>
-        <nav>
+    <header class="header">
 
-            <div class="logo">ZADY</div>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                ZADY
+            </a>
 
             <div class="nav-links">
+
                 <a href="#home">Home</a>
+
                 <a href="#shop">Shop</a>
+
                 <a href="#about">About</a>
+
                 <a href="#contact">Contact</a>
 
-                <button onclick="openCart()">
-                    🛒 Cart (<span id="cart-count">0</span>)
+                <button
+                    class="cart-button"
+                    onclick="openCart()"
+                    type="button">
+
+                    🛒
+                    <span>Cart</span>
+                    <b id="cart-count">0</b>
+
                 </button>
+
             </div>
 
+            <button
+                class="menu-button"
+                onclick="toggleMenu()"
+                type="button">
+
+                ☰
+
+            </button>
+
         </nav>
+
     </header>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
-    <section class="hero" id="home">
+    <main>
 
-        <div class="hero-content">
+        <section
+            id="home"
+            class="hero">
 
-            <p class="small-title">WELCOME TO ZADY</p>
+            <div class="hero-content">
 
-            <h1>WEAR YOUR<br>ATTITUDE.</h1>
+                <p class="eyebrow">
+                    WELCOME TO ZADY
+                </p>
 
-            <p>
-                Modern clothing designed for people
-                who want to stand out.
+                <h1>
+                    WEAR YOUR
+                    <span>ATTITUDE.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Modern clothing designed for people
+                    who want to stand out.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#shop"
+                        class="primary-button">
+
+                        Shop Collection
+
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="secondary-button">
+
+                        Discover ZADY
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section class="benefits">
+
+            <div class="benefit">
+
+                <span>🚚</span>
+
+                <div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery to your doorstep.</p>
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <span>✨</span>
+
+                <div>
+                    <h3>Premium Quality</h3>
+                    <p>Quality-focused products.</p>
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <span>↩️</span>
+
+                <div>
+                    <h3>Easy Returns</h3>
+                    <p>Simple return experience.</p>
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <span>🔒</span>
+
+                <div>
+                    <h3>Secure Checkout</h3>
+                    <p>Your checkout is protected.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SHOP
+        ========================== -->
+
+        <section
+            id="shop"
+            class="shop-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    OUR COLLECTION
+                </p>
+
+                <h2>
+                    SHOP <span>ZADY</span>
+                </h2>
+
+                <p>
+                    Find your style from our latest collection.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH + FILTER -->
+
+            <div class="shop-tools">
+
+                <div class="search-box">
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search products..."
+                        oninput="searchProducts()">
+
+                    <span>🔎</span>
+
+                </div>
+
+
+                <div class="categories">
+
+                    <button
+                        class="category-button active"
+                        onclick="filterProducts('all', this)"
+                        type="button">
+
+                        All
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        onclick="filterProducts('tshirt', this)"
+                        type="button">
+
+                        T-Shirts
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        onclick="filterProducts('hoodie', this)"
+                        type="button">
+
+                        Hoodies
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        onclick="filterProducts('cargo', this)"
+                        type="button">
+
+                        Bottomwear
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <div
+                id="products"
+                class="products">
+
+
+                <!-- PRODUCT 1 -->
+
+                <article
+                    class="product"
+                    data-category="tshirt"
+                    data-name="Oversized T-Shirt">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://placehold.co/600x700/171717/ffffff?text=ZADY+T-SHIRT"
+                            alt="ZADY Oversized T-Shirt">
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                            type="button">
+
+                            ♡
+
+                        </button>
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-category">
+                            T-SHIRTS
+                        </p>
+
+                        <h3>
+                            Oversized T-Shirt
+                        </h3>
+
+                        <p class="product-description">
+                            Premium oversized fit
+                            with a clean modern look.
+                        </p>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(12)</span>
+                        </div>
+
+                        <div class="product-price">
+                            ₹799
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="size-tshirt">
+                                Size
+                            </label>
+
+                            <select id="size-tshirt">
+
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="color-tshirt">
+                                Colour
+                            </label>
+
+                            <select id="color-tshirt">
+
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Grey">Grey</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="quantity-tshirt">
+                                Quantity
+                            </label>
+
+                            <input
+                                id="quantity-tshirt"
+                                type="number"
+                                value="1"
+                                min="1"
+                                max="10">
+
+                        </div>
+
+
+                        <button
+                            class="add-button"
+                            onclick="addProductToCart(
+                                'Oversized T-Shirt',
+                                799,
+                                'size-tshirt',
+                                'color-tshirt',
+                                'quantity-tshirt'
+                            )"
+                            type="button">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+
+                <article
+                    class="product"
+                    data-category="hoodie"
+                    data-name="Premium Hoodie">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://placehold.co/600x700/171717/ffffff?text=ZADY+HOODIE"
+                            alt="ZADY Premium Hoodie">
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                            type="button">
+
+                            ♡
+
+                        </button>
+
+                        <span class="product-badge">
+                            HOT
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-category">
+                            HOODIES
+                        </p>
+
+                        <h3>
+                            ZADY Premium Hoodie
+                        </h3>
+
+                        <p class="product-description">
+                            Comfortable premium hoodie
+                            for everyday style.
+                        </p>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(18)</span>
+                        </div>
+
+                        <div class="product-price">
+                            ₹1,499
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="size-hoodie">
+                                Size
+                            </label>
+
+                            <select id="size-hoodie">
+
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="color-hoodie">
+                                Colour
+                            </label>
+
+                            <select id="color-hoodie">
+
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Grey">Grey</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="quantity-hoodie">
+                                Quantity
+                            </label>
+
+                            <input
+                                id="quantity-hoodie"
+                                type="number"
+                                value="1"
+                                min="1"
+                                max="10">
+
+                        </div>
+
+
+                        <button
+                            class="add-button"
+                            onclick="addProductToCart(
+                                'ZADY Premium Hoodie',
+                                1499,
+                                'size-hoodie',
+                                'color-hoodie',
+                                'quantity-hoodie'
+                            )"
+                            type="button">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+
+                <article
+                    class="product"
+                    data-category="cargo"
+                    data-name="ZADY Cargo Pants">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://placehold.co/600x700/171717/ffffff?text=ZADY+CARGO"
+                            alt="ZADY Cargo Pants">
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                            type="button">
+
+                            ♡
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-category">
+                            BOTTOMWEAR
+                        </p>
+
+                        <h3>
+                            ZADY Cargo Pants
+                        </h3>
+
+                        <p class="product-description">
+                            Relaxed fit cargo pants
+                            with a premium finish.
+                        </p>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(9)</span>
+                        </div>
+
+                        <div class="product-price">
+                            ₹1,299
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="size-cargo">
+                                Size
+                            </label>
+
+                            <select id="size-cargo">
+
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="color-cargo">
+                                Colour
+                            </label>
+
+                            <select id="color-cargo">
+
+                                <option value="Black">Black</option>
+                                <option value="Olive">Olive</option>
+                                <option value="Beige">Beige</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <label for="quantity-cargo">
+                                Quantity
+                            </label>
+
+                            <input
+                                id="quantity-cargo"
+                                type="number"
+                                value="1"
+                                min="1"
+                                max="10">
+
+                        </div>
+
+
+                        <button
+                            class="add-button"
+                            onclick="addProductToCart(
+                                'ZADY Cargo Pants',
+                                1299,
+                                'size-cargo',
+                                'color-cargo',
+                                'quantity-cargo'
+                            )"
+                            type="button">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p
+                id="no-products"
+                class="no-products">
+
+                No products found.
+
             </p>
 
-            <a href="#shop" class="shop-btn">
-                SHOP COLLECTION
-            </a>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- SHOP -->
+        <!-- =========================
+             CART
+        ========================== -->
 
-    <section id="shop">
+        <section
+            id="cart-section"
+            class="cart-section">
 
-        <p class="small-title">OUR COLLECTION</p>
+            <div class="section-heading">
 
-        <h2>SHOP <span>ZADY</span></h2>
-
-        <p class="section-description">
-            Discover our latest clothing collection.
-        </p>
-
-
-        <div class="products">
-
-
-            <!-- T-SHIRT -->
-
-            <div class="product">
-
-                <div class="product-image">
-                    <img
-                        src="https://placehold.co/600x700/111111/ffffff?text=ZADY+T-SHIRT"
-                        alt="ZADY Oversized T-Shirt">
-                </div>
-
-                <p class="category">T-SHIRTS</p>
-
-                <h3>Oversized T-Shirt</h3>
-
-                <p>
-                    Premium oversized fit
-                    with a clean modern look.
+                <p class="eyebrow">
+                    YOUR SHOPPING BAG
                 </p>
 
-                <div class="price">₹799</div>
-
-
-                <label>Size</label>
-
-                <select id="size-tshirt">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-
-
-                <label>Colour</label>
-
-                <select id="color-tshirt">
-                    <option value="Black">Black</option>
-                    <option value="White">White</option>
-                    <option value="Grey">Grey</option>
-                </select>
-
-
-                <label>Quantity</label>
-
-                <input
-                    type="number"
-                    id="quantity-tshirt"
-                    value="1"
-                    min="1"
-                    max="10">
-
-
-                <button onclick="addProductToCart(
-                    'Oversized T-Shirt',
-                    799,
-                    'size-tshirt',
-                    'color-tshirt',
-                    'quantity-tshirt'
-                )">
-                    Add to Cart
-                </button>
+                <h2>
+                    YOUR <span>CART</span>
+                </h2>
 
             </div>
 
 
-            <!-- HOODIE -->
+            <div
+                id="cart-items"
+                class="cart-items">
 
-            <div class="product">
+                <div class="empty-cart">
 
-                <div class="product-image">
-                    <img
-                        src="https://placehold.co/600x700/111111/ffffff?text=ZADY+HOODIE"
-                        alt="ZADY Premium Hoodie">
+                    <div>🛒</div>
+
+                    <h3>
+                        Your cart is empty
+                    </h3>
+
+                    <p>
+                        Add something from our collection.
+                    </p>
+
+                    <a href="#shop">
+                        Continue Shopping
+                    </a>
+
                 </div>
-
-                <p class="category">HOODIES</p>
-
-                <h3>ZADY Premium Hoodie</h3>
-
-                <p>
-                    Comfortable premium hoodie
-                    for everyday style.
-                </p>
-
-                <div class="price">₹1,499</div>
-
-
-                <label>Size</label>
-
-                <select id="size-hoodie">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-
-
-                <label>Colour</label>
-
-                <select id="color-hoodie">
-                    <option value="Black">Black</option>
-                    <option value="White">White</option>
-                    <option value="Grey">Grey</option>
-                </select>
-
-
-                <label>Quantity</label>
-
-                <input
-                    type="number"
-                    id="quantity-hoodie"
-                    value="1"
-                    min="1"
-                    max="10">
-
-
-                <button onclick="addProductToCart(
-                    'ZADY Premium Hoodie',
-                    1499,
-                    'size-hoodie',
-                    'color-hoodie',
-                    'quantity-hoodie'
-                )">
-                    Add to Cart
-                </button>
 
             </div>
 
 
-            <!-- CARGO -->
+            <div class="cart-summary">
 
-            <div class="product">
+                <div class="summary-row">
 
-                <div class="product-image">
-                    <img
-                        src="https://placehold.co/600x700/111111/ffffff?text=ZADY+CARGO"
-                        alt="ZADY Cargo Pants">
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="cart-subtotal">
+                        ₹0
+                    </strong>
+
                 </div>
 
-                <p class="category">BOTTOMWEAR</p>
 
-                <h3>ZADY Cargo Pants</h3>
+                <div class="summary-row">
 
-                <p>
-                    Relaxed fit cargo pants
-                    with a premium finish.
+                    <span>
+                        Shipping
+                    </span>
+
+                    <strong id="shipping-cost">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="coupon-box">
+
+                    <input
+                        id="coupon-input"
+                        type="text"
+                        placeholder="Coupon code">
+
+                    <button
+                        onclick="applyCoupon()"
+                        type="button">
+
+                        Apply
+
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="coupon-message"
+                    class="coupon-message">
                 </p>
 
-                <div class="price">₹1,299</div>
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="cart-total">
+                        ₹0
+                    </strong>
+
+                </div>
 
 
-                <label>Size</label>
+                <button
+                    id="checkout-button"
+                    class="checkout-button"
+                    onclick="openCheckout()"
+                    disabled
+                    type="button">
 
-                <select id="size-cargo">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
+                    Proceed to Checkout
 
-
-                <label>Colour</label>
-
-                <select id="color-cargo">
-                    <option value="Black">Black</option>
-                    <option value="Olive">Olive</option>
-                    <option value="Beige">Beige</option>
-                </select>
-
-
-                <label>Quantity</label>
-
-                <input
-                    type="number"
-                    id="quantity-cargo"
-                    value="1"
-                    min="1"
-                    max="10">
-
-
-                <button onclick="addProductToCart(
-                    'ZADY Cargo Pants',
-                    1299,
-                    'size-cargo',
-                    'color-cargo',
-                    'quantity-cargo'
-                )">
-                    Add to Cart
                 </button>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- CART -->
+        <!-- =========================
+             ABOUT
+        ========================== -->
 
-    <section id="cart-section" class="cart-section">
+        <section
+            id="about"
+            class="about-section">
 
-        <p class="small-title">YOUR SHOPPING BAG</p>
+            <div class="section-heading">
 
-        <h2>YOUR <span>CART</span></h2>
+                <p class="eyebrow">
+                    OUR STORY
+                </p>
+
+                <h2>
+                    ABOUT <span>ZADY</span>
+                </h2>
+
+            </div>
 
 
-        <div id="cart-items" class="cart-items">
+            <div class="about-content">
 
-            <p class="empty-cart">
-                Your cart is empty.
-            </p>
+                <p>
+                    ZADY is a modern brand built around
+                    confidence, creativity and individuality.
+                </p>
 
-        </div>
+                <p>
+                    Our goal is simple:
+                    create products that help you
+                    express yourself with confidence.
+                </p>
+
+            </div>
+
+        </section>
 
 
-        <div class="cart-summary">
+        <!-- =========================
+             WHY ZADY
+        ========================== -->
 
-            <h3>
-                Subtotal:
-                <span id="cart-total">₹0</span>
-            </h3>
+        <section class="why-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    WHY ZADY
+                </p>
+
+                <h2>
+                    BUILT FOR <span>YOU</span>
+                </h2>
+
+            </div>
+
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Premium Quality
+                    </h3>
+
+                    <p>
+                        Carefully selected products
+                        made for everyday use.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🔥
+                    </div>
+
+                    <h3>
+                        Modern Style
+                    </h3>
+
+                    <p>
+                        Clean and modern designs
+                        made to stand out.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ❤️
+                    </div>
+
+                    <h3>
+                        Made With Passion
+                    </h3>
+
+                    <p>
+                        Every detail is created
+                        with passion and care.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Built For Everyone
+                    </h3>
+
+                    <p>
+                        Products designed for
+                        different styles and lifestyles.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="contact-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    CONTACT <span>ZADY</span>
+                </h2>
+
+            </div>
+
+
+            <form
+                id="contact-form"
+                class="contact-form"
+                onsubmit="sendMessage(event)">
+
+                <input
+                    id="contact-name"
+                    type="text"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    id="contact-email"
+                    type="email"
+                    placeholder="Your Email"
+                    required>
+
+                <textarea
+                    id="contact-message"
+                    placeholder="Your Message"
+                    required></textarea>
+
+                <button
+                    type="submit">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CHECKOUT MODAL
+    ========================== -->
+
+    <div
+        id="checkout-modal"
+        class="modal">
+
+        <div class="modal-content">
 
             <button
-                id="checkout-button"
-                onclick="checkout()"
-                disabled>
-                CHECKOUT
+                class="close-modal"
+                onclick="closeCheckout()"
+                type="button">
+
+                ×
+
             </button>
 
-        </div>
 
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <p class="small-title">OUR STORY</p>
-
-        <h2>ABOUT <span>ZADY</span></h2>
-
-        <div class="about">
-
-            <p>
-                ZADY is a modern clothing brand built around
-                confidence, creativity and individuality.
-                Our goal is simple — create clothing that
-                makes you feel confident every time you wear it.
+            <p class="eyebrow">
+                ZADY CHECKOUT
             </p>
 
+            <h2>
+                COMPLETE YOUR ORDER
+            </h2>
+
+
+            <form
+                id="checkout-form"
+                onsubmit="placeOrder(event)">
+
+                <input
+                    id="customer-name"
+                    type="text"
+                    placeholder="Full Name"
+                    required>
+
+                <input
+                    id="customer-phone"
+                    type="tel"
+                    placeholder="Phone Number"
+                    required>
+
+                <input
+                    id="customer-email"
+                    type="email"
+                    placeholder="Email Address"
+                    required>
+
+                <textarea
+                    id="customer-address"
+                    placeholder="Delivery Address"
+                    required></textarea>
+
+
+                <select
+                    id="payment-method"
+                    required>
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    <option value="Cash on Delivery">
+                        Cash on Delivery
+                    </option>
+
+                    <option value="Online Payment">
+                        Online Payment
+                    </option>
+
+                </select>
+
+
+                <div class="checkout-total">
+
+                    Order Total:
+
+                    <strong id="checkout-total">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="place-order-button"
+                    type="submit">
+
+                    Place Order
+
+                </button>
+
+            </form>
+
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- FEATURES -->
+    <!-- =========================
+         ORDER SUCCESS MODAL
+    ========================== -->
 
-    <section>
+    <div
+        id="success-modal"
+        class="modal">
 
-        <p class="small-title">WHY ZADY</p>
+        <div class="modal-content success-content">
 
-        <h2>BUILT FOR <span>YOU</span></h2>
-
-        <div class="features">
-
-            <div class="feature">
-                <div>✨</div>
-                <h3>Premium Quality</h3>
-                <p>
-                    Quality-focused clothing
-                    made for everyday wear.
-                </p>
+            <div class="success-icon">
+                ✓
             </div>
 
-            <div class="feature">
-                <div>🔥</div>
-                <h3>Modern Style</h3>
-                <p>
-                    Clean designs inspired
-                    by modern streetwear.
-                </p>
-            </div>
+            <h2>
+                ORDER PLACED!
+            </h2>
 
-            <div class="feature">
-                <div>❤️</div>
-                <h3>Made With Passion</h3>
-                <p>
-                    Every ZADY product is created
-                    with attention to detail.
-                </p>
-            </div>
+            <p>
+                Thank you for shopping with ZADY.
+            </p>
 
-        </div>
+            <p>
+                Your order has been received.
+            </p>
 
-    </section>
+            <strong id="order-number">
+                Order #ZADY0001
+            </strong>
 
+            <button
+                onclick="closeSuccess()"
+                type="button">
 
-    <!-- CONTACT -->
+                Continue Shopping
 
-    <section id="contact">
-
-        <p class="small-title">GET IN TOUCH</p>
-
-        <h2>CONTACT <span>ZADY</span></h2>
-
-        <div class="contact">
-
-            <input
-                type="text"
-                placeholder="Your Name">
-
-            <input
-                type="email"
-                placeholder="Your Email">
-
-            <textarea
-                placeholder="Your Message"></textarea>
-
-            <button onclick="sendMessage()">
-                SEND MESSAGE
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
-        <h3>ZADY</h3>
+        <div class="footer-content">
 
-        <p>Wear Your Attitude.</p>
+            <div>
 
-        <p>© 2026 ZADY. All Rights Reserved.</p>
+                <h3>
+                    ZADY
+                </h3>
+
+                <p>
+                    Wear Your Attitude.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#shop">Shop</a>
+
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ZADY. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
