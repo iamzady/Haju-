@@ -1,5 +1,10 @@
 let cart = [];
 
+
+/* =========================
+   ADD TO CART
+========================= */
+
 function addToCart(productName, price) {
 
     cart.push({
@@ -7,43 +12,81 @@ function addToCart(productName, price) {
         price: price
     });
 
-    document.getElementById("cart-count").innerText = cart.length;
+    updateCartCount();
 
     alert(productName + " added to cart!");
 }
 
 
+/* =========================
+   UPDATE CART COUNT
+========================= */
+
+function updateCartCount() {
+
+    const cartCount =
+        document.getElementById("cart-count");
+
+    if (cartCount) {
+        cartCount.innerText = cart.length;
+    }
+}
+
+
+/* =========================
+   SHOW CART
+========================= */
+
 function showCart() {
 
     if (cart.length === 0) {
-        alert("Your cart is empty!");
+
+        alert("Your ZADY cart is empty.");
+
         return;
     }
 
-    let message = "YOUR ZADY CART\n\n";
+
+    let message = "ZADY CART\n\n";
 
     let total = 0;
 
+
     cart.forEach(function(item, index) {
 
-        message += (index + 1) + ". "
-                + item.name
-                + " - ₹"
-                + item.price
-                + "\n";
+        message +=
+            (index + 1) +
+            ". " +
+            item.name +
+            " - ₹" +
+            item.price +
+            "\n";
 
         total += item.price;
+
     });
 
-    message += "\n----------------\n";
-    message += "Total: ₹" + total;
+
+    message +=
+        "\n--------------------\n";
+
+    message +=
+        "TOTAL: ₹" +
+        total;
+
 
     alert(message);
 }
 
 
+/* =========================
+   CONTACT MESSAGE
+========================= */
+
 function sendMessage() {
 
-    alert("Thank you for contacting ZADY!");
+    alert(
+        "Thank you for contacting ZADY!"
+    );
 
 }
