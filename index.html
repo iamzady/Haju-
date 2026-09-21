@@ -5,22 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZADY | Official Store</title>
+    <title>ZADY | Clothing Store</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAVBAR -->
 
     <header>
-
         <nav>
 
-            <div class="logo">
-                ZADY
-            </div>
+            <div class="logo">ZADY</div>
 
             <div class="nav-links">
                 <a href="#home">Home</a>
@@ -34,35 +31,26 @@
             </div>
 
         </nav>
-
     </header>
 
 
-    <!-- HOME -->
+    <!-- HERO -->
 
     <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <p class="small-title">
-                WELCOME TO
-            </p>
+            <p class="small-title">WELCOME TO ZADY</p>
 
-            <h1>
-                ZADY
-            </h1>
-
-            <h2>
-                Discover Something New.
-            </h2>
+            <h1>WEAR YOUR<br>ATTITUDE.</h1>
 
             <p>
-                Explore our collection of premium products
-                designed for your lifestyle.
+                Modern clothing designed for people
+                who want to stand out.
             </p>
 
             <a href="#shop" class="shop-btn">
-                Shop Now
+                SHOP COLLECTION
             </a>
 
         </div>
@@ -74,93 +62,111 @@
 
     <section id="shop">
 
-        <h2>
-            Our Products
-        </h2>
+        <p class="small-title">OUR COLLECTION</p>
+
+        <h2>SHOP <span>ZADY</span></h2>
 
         <p class="section-description">
-            Discover our latest collection.
+            Discover our latest clothing collection.
         </p>
 
 
         <div class="products">
 
 
-            <!-- PRODUCT 1 -->
+            <!-- T-SHIRT -->
 
             <div class="product">
 
                 <div class="product-image">
-                    PRODUCT 01
+                    👕
                 </div>
 
+                <p class="category">
+                    T-SHIRTS
+                </p>
+
                 <h3>
-                    Premium Black
+                    Oversized T-Shirt
                 </h3>
 
                 <p>
-                    Premium quality product.
+                    Premium oversized fit
+                    with a clean modern look.
                 </p>
 
                 <div class="price">
-                    ₹999
+                    ₹799
                 </div>
 
-                <button onclick="addToCart('Premium Black', 999)">
+                <button
+                    onclick="addToCart('Oversized T-Shirt', 799)">
                     Add to Cart
                 </button>
 
             </div>
 
 
-            <!-- PRODUCT 2 -->
+            <!-- HOODIE -->
 
             <div class="product">
 
                 <div class="product-image">
-                    PRODUCT 02
+                    🧥
                 </div>
 
+                <p class="category">
+                    HOODIES
+                </p>
+
                 <h3>
-                    ZADY Classic
+                    ZADY Premium Hoodie
                 </h3>
 
                 <p>
-                    Simple. Clean. Stylish.
+                    Comfortable premium hoodie
+                    for everyday style.
                 </p>
 
                 <div class="price">
                     ₹1,499
                 </div>
 
-                <button onclick="addToCart('ZADY Classic', 1499)">
+                <button
+                    onclick="addToCart('ZADY Premium Hoodie', 1499)">
                     Add to Cart
                 </button>
 
             </div>
 
 
-            <!-- PRODUCT 3 -->
+            <!-- CARGO -->
 
             <div class="product">
 
                 <div class="product-image">
-                    PRODUCT 03
+                    👖
                 </div>
 
+                <p class="category">
+                    BOTTOMWEAR
+                </p>
+
                 <h3>
-                    ZADY Premium
+                    ZADY Cargo Pants
                 </h3>
 
                 <p>
-                    Designed for a premium experience.
+                    Relaxed fit cargo pants
+                    with a premium finish.
                 </p>
 
                 <div class="price">
-                    ₹1,999
+                    ₹1,299
                 </div>
 
-                <button onclick="addToCart('ZADY Premium', 1999)">
+                <button
+                    onclick="addToCart('ZADY Cargo Pants', 1299)">
                     Add to Cart
                 </button>
 
@@ -176,16 +182,65 @@
 
     <section id="about">
 
-        <h2>
-            About ZADY
-        </h2>
+        <p class="small-title">OUR STORY</p>
+
+        <h2>ABOUT <span>ZADY</span></h2>
 
         <div class="about">
 
             <p>
-                ZADY is a creative brand built with a passion
-                for design, technology and modern ideas.
+                ZADY is a modern clothing brand built around
+                confidence, creativity and individuality.
+
+                Our goal is simple:
+                create clothing that makes you feel
+                confident every time you wear it.
             </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY ZADY -->
+
+    <section>
+
+        <p class="small-title">WHY ZADY</p>
+
+        <h2>BUILT FOR <span>YOU</span></h2>
+
+
+        <div class="features">
+
+            <div class="feature">
+                <div>✨</div>
+                <h3>Premium Quality</h3>
+                <p>
+                    Quality-focused clothing
+                    made for everyday wear.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div>🔥</div>
+                <h3>Modern Style</h3>
+                <p>
+                    Clean designs inspired
+                    by modern streetwear.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div>❤️</div>
+                <h3>Made With Passion</h3>
+                <p>
+                    Every ZADY product is created
+                    with attention to detail.
+                </p>
+            </div>
 
         </div>
 
@@ -196,9 +251,9 @@
 
     <section id="contact">
 
-        <h2>
-            Contact Us
-        </h2>
+        <p class="small-title">GET IN TOUCH</p>
+
+        <h2>CONTACT <span>ZADY</span></h2>
 
         <div class="contact">
 
@@ -217,7 +272,7 @@
             ></textarea>
 
             <button onclick="sendMessage()">
-                Send Message
+                SEND MESSAGE
             </button>
 
         </div>
@@ -229,9 +284,14 @@
 
     <footer>
 
+        <h3>ZADY</h3>
+
         <p>
-            © 2026 <span>ZADY</span>.
-            All Rights Reserved.
+            Wear Your Attitude.
+        </p>
+
+        <p>
+            © 2026 ZADY. All Rights Reserved.
         </p>
 
     </footer>
