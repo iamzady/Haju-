@@ -25,7 +25,7 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
 
-                <button onclick="showCart()">
+                <button onclick="openCart()">
                     🛒 Cart (<span id="cart-count">0</span>)
                 </button>
             </div>
@@ -74,7 +74,7 @@
         <div class="products">
 
 
-            <!-- PRODUCT 1 -->
+            <!-- T-SHIRT -->
 
             <div class="product">
 
@@ -138,7 +138,7 @@
             </div>
 
 
-            <!-- PRODUCT 2 -->
+            <!-- HOODIE -->
 
             <div class="product">
 
@@ -202,7 +202,7 @@
             </div>
 
 
-            <!-- PRODUCT 3 -->
+            <!-- CARGO -->
 
             <div class="product">
 
@@ -270,6 +270,43 @@
     </section>
 
 
+    <!-- CART -->
+
+    <section id="cart-section" class="cart-section">
+
+        <p class="small-title">YOUR SHOPPING BAG</p>
+
+        <h2>YOUR <span>CART</span></h2>
+
+
+        <div id="cart-items" class="cart-items">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+            <h3>
+                Subtotal:
+                <span id="cart-total">₹0</span>
+            </h3>
+
+            <button
+                id="checkout-button"
+                onclick="checkout()"
+                disabled>
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </section>
+
+
     <!-- ABOUT -->
 
     <section id="about">
@@ -305,19 +342,28 @@
             <div class="feature">
                 <div>✨</div>
                 <h3>Premium Quality</h3>
-                <p>Quality-focused clothing made for everyday wear.</p>
+                <p>
+                    Quality-focused clothing
+                    made for everyday wear.
+                </p>
             </div>
 
             <div class="feature">
                 <div>🔥</div>
                 <h3>Modern Style</h3>
-                <p>Clean designs inspired by modern streetwear.</p>
+                <p>
+                    Clean designs inspired
+                    by modern streetwear.
+                </p>
             </div>
 
             <div class="feature">
                 <div>❤️</div>
                 <h3>Made With Passion</h3>
-                <p>Every ZADY product is created with attention to detail.</p>
+                <p>
+                    Every ZADY product is created
+                    with attention to detail.
+                </p>
             </div>
 
         </div>
@@ -335,11 +381,16 @@
 
         <div class="contact">
 
-            <input type="text" placeholder="Your Name">
+            <input
+                type="text"
+                placeholder="Your Name">
 
-            <input type="email" placeholder="Your Email">
+            <input
+                type="email"
+                placeholder="Your Email">
 
-            <textarea placeholder="Your Message"></textarea>
+            <textarea
+                placeholder="Your Message"></textarea>
 
             <button onclick="sendMessage()">
                 SEND MESSAGE
