@@ -70,6 +70,7 @@
             Discover our latest clothing collection.
         </p>
 
+
         <div class="products">
 
 
@@ -80,8 +81,7 @@
                 <div class="product-image">
                     <img
                         src="https://placehold.co/600x700/111111/ffffff?text=ZADY+T-SHIRT"
-                        alt="ZADY Oversized T-Shirt"
-                    >
+                        alt="ZADY Oversized T-Shirt">
                 </div>
 
                 <p class="category">T-SHIRTS</p>
@@ -95,7 +95,43 @@
 
                 <div class="price">₹799</div>
 
-                <button onclick="addToCart('Oversized T-Shirt', 799)">
+
+                <label>Size</label>
+
+                <select id="size-tshirt">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+
+                <label>Colour</label>
+
+                <select id="color-tshirt">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Grey">Grey</option>
+                </select>
+
+
+                <label>Quantity</label>
+
+                <input
+                    type="number"
+                    id="quantity-tshirt"
+                    value="1"
+                    min="1"
+                    max="10">
+
+
+                <button onclick="addProductToCart(
+                    'Oversized T-Shirt',
+                    799,
+                    'size-tshirt',
+                    'color-tshirt',
+                    'quantity-tshirt'
+                )">
                     Add to Cart
                 </button>
 
@@ -109,8 +145,7 @@
                 <div class="product-image">
                     <img
                         src="https://placehold.co/600x700/111111/ffffff?text=ZADY+HOODIE"
-                        alt="ZADY Premium Hoodie"
-                    >
+                        alt="ZADY Premium Hoodie">
                 </div>
 
                 <p class="category">HOODIES</p>
@@ -124,7 +159,43 @@
 
                 <div class="price">₹1,499</div>
 
-                <button onclick="addToCart('ZADY Premium Hoodie', 1499)">
+
+                <label>Size</label>
+
+                <select id="size-hoodie">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+
+                <label>Colour</label>
+
+                <select id="color-hoodie">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Grey">Grey</option>
+                </select>
+
+
+                <label>Quantity</label>
+
+                <input
+                    type="number"
+                    id="quantity-hoodie"
+                    value="1"
+                    min="1"
+                    max="10">
+
+
+                <button onclick="addProductToCart(
+                    'ZADY Premium Hoodie',
+                    1499,
+                    'size-hoodie',
+                    'color-hoodie',
+                    'quantity-hoodie'
+                )">
                     Add to Cart
                 </button>
 
@@ -138,8 +209,7 @@
                 <div class="product-image">
                     <img
                         src="https://placehold.co/600x700/111111/ffffff?text=ZADY+CARGO"
-                        alt="ZADY Cargo Pants"
-                    >
+                        alt="ZADY Cargo Pants">
                 </div>
 
                 <p class="category">BOTTOMWEAR</p>
@@ -153,7 +223,43 @@
 
                 <div class="price">₹1,299</div>
 
-                <button onclick="addToCart('ZADY Cargo Pants', 1299)">
+
+                <label>Size</label>
+
+                <select id="size-cargo">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+
+                <label>Colour</label>
+
+                <select id="color-cargo">
+                    <option value="Black">Black</option>
+                    <option value="Olive">Olive</option>
+                    <option value="Beige">Beige</option>
+                </select>
+
+
+                <label>Quantity</label>
+
+                <input
+                    type="number"
+                    id="quantity-cargo"
+                    value="1"
+                    min="1"
+                    max="10">
+
+
+                <button onclick="addProductToCart(
+                    'ZADY Cargo Pants',
+                    1299,
+                    'size-cargo',
+                    'color-cargo',
+                    'quantity-cargo'
+                )">
                     Add to Cart
                 </button>
 
@@ -199,28 +305,19 @@
             <div class="feature">
                 <div>✨</div>
                 <h3>Premium Quality</h3>
-                <p>
-                    Quality-focused clothing
-                    made for everyday wear.
-                </p>
+                <p>Quality-focused clothing made for everyday wear.</p>
             </div>
 
             <div class="feature">
                 <div>🔥</div>
                 <h3>Modern Style</h3>
-                <p>
-                    Clean designs inspired
-                    by modern streetwear.
-                </p>
+                <p>Clean designs inspired by modern streetwear.</p>
             </div>
 
             <div class="feature">
                 <div>❤️</div>
                 <h3>Made With Passion</h3>
-                <p>
-                    Every ZADY product is created
-                    with attention to detail.
-                </p>
+                <p>Every ZADY product is created with attention to detail.</p>
             </div>
 
         </div>
@@ -238,19 +335,11 @@
 
         <div class="contact">
 
-            <input
-                type="text"
-                placeholder="Your Name"
-            >
+            <input type="text" placeholder="Your Name">
 
-            <input
-                type="email"
-                placeholder="Your Email"
-            >
+            <input type="email" placeholder="Your Email">
 
-            <textarea
-                placeholder="Your Message"
-            ></textarea>
+            <textarea placeholder="Your Message"></textarea>
 
             <button onclick="sendMessage()">
                 SEND MESSAGE
