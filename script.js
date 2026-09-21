@@ -1,34 +1,49 @@
 let cart = [];
-let cartCount = 0;
 
 function addToCart(productName, price) {
+
     cart.push({
         name: productName,
         price: price
     });
 
-    cartCount++;
+    document.getElementById("cart-count").innerText = cart.length;
 
     alert(productName + " added to cart!");
-
-    const cartButton = document.getElementById("cart-count");
-
-    if (cartButton) {
-        cartButton.innerText = cartCount;
-    }
 }
 
+
 function showCart() {
+
     if (cart.length === 0) {
         alert("Your cart is empty!");
         return;
     }
 
-    let message = "Your Cart:\n\n";
+    let message = "YOUR ZADY CART\n\n";
 
-    cart.forEach((item, index) => {
-        message += (index + 1) + ". " + item.name + " - ₹" + item.price + "\n";
+    let total = 0;
+
+    cart.forEach(function(item, index) {
+
+        message += (index + 1) + ". "
+                + item.name
+                + " - ₹"
+                + item.price
+                + "\n";
+
+        total += item.price;
     });
 
+    message += "\n----------------\n";
+    message += "Total: ₹" + total;
+
     alert(message);
+}
+
+
+function sendMessage() {
+
+    alert("Thank you for contacting ZADY!");
+
 }
