@@ -1,372 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZADY | Official Website</title>
+    <title>ZADY | Official Store</title>
 
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #050505;
-            color: white;
-            line-height: 1.6;
-        }
-
-        /* NAVBAR */
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(5, 5, 5, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #222;
-        }
-
-        nav {
-            max-width: 1100px;
-            margin: auto;
-            padding: 18px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #00ff88;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #00ff88;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 100px 20px 50px;
-            background:
-                radial-gradient(circle at top, #123b2b 0%, #050505 45%);
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: clamp(55px, 12vw, 110px);
-            letter-spacing: 8px;
-            color: #00ff88;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            font-size: clamp(22px, 5vw, 40px);
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            color: #aaa;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 28px;
-            margin: 5px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .primary-btn {
-            background: #00ff88;
-            color: #000;
-        }
-
-        .primary-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
-        }
-
-        .secondary-btn {
-            border: 1px solid #00ff88;
-            color: #00ff88;
-        }
-
-        .secondary-btn:hover {
-            background: #00ff88;
-            color: #000;
-        }
-
-        /* GENERAL */
-
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 100px 25px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 38px;
-            margin-bottom: 50px;
-        }
-
-        .section-title span {
-            color: #00ff88;
-        }
-
-        /* ABOUT */
-
-        .about {
-            text-align: center;
-        }
-
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            color: #aaa;
-            font-size: 17px;
-        }
-
-        /* SERVICES */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: #111;
-            border: 1px solid #222;
-            border-radius: 18px;
-            padding: 30px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: #00ff88;
-        }
-
-        .card .icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #999;
-        }
-
-        /* PROJECTS */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .project {
-            min-height: 220px;
-            background: linear-gradient(145deg, #151515, #090909);
-            border: 1px solid #222;
-            border-radius: 18px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: scale(1.02);
-            border-color: #00ff88;
-        }
-
-        .project h3 {
-            color: #00ff88;
-            margin-bottom: 8px;
-        }
-
-        .project p {
-            color: #999;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .skill {
-            margin-bottom: 20px;
-        }
-
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 7px;
-        }
-
-        .bar {
-            height: 8px;
-            background: #222;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background: #00ff88;
-            border-radius: 10px;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact p {
-            color: #999;
-            margin-bottom: 25px;
-        }
-
-        .contact-box {
-            max-width: 600px;
-            margin: auto;
-            display: grid;
-            gap: 15px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 15px;
-            background: #111;
-            color: white;
-            border: 1px solid #333;
-            border-radius: 10px;
-            outline: none;
-        }
-
-        input:focus,
-        textarea:focus {
-            border-color: #00ff88;
-        }
-
-        textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
-
-        button {
-            padding: 14px;
-            background: #00ff88;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid #222;
-            color: #777;
-        }
-
-        footer span {
-            color: #00ff88;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 750px) {
-
-            nav {
-                padding: 15px 18px;
-            }
-
-            .logo {
-                font-size: 22px;
-            }
-
-            nav ul {
-                gap: 12px;
-            }
-
-            nav ul li a {
-                font-size: 12px;
-            }
-
-            .hero h1 {
-                letter-spacing: 4px;
-            }
-
-            .cards,
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 75px 20px;
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -374,21 +15,26 @@
     <!-- NAVIGATION -->
 
     <header>
+
         <nav>
 
             <div class="logo">
                 ZADY
             </div>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+                <button onclick="showCart()">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </button>
+            </div>
 
         </nav>
+
     </header>
 
 
@@ -398,22 +44,128 @@
 
         <div class="hero-content">
 
-            <h1>ZADY</h1>
-
-            <h2>Creative. Digital. Future.</h2>
-
-            <p>
-                Welcome to my official website.
-                Explore my work, skills and creative projects.
+            <p class="small-title">
+                WELCOME TO
             </p>
 
-            <a href="#projects" class="btn primary-btn">
-                Explore My Work
+            <h1>
+                ZADY
+            </h1>
+
+            <h2>
+                Discover Something New.
+            </h2>
+
+            <p>
+                Explore our collection of premium products
+                designed for your lifestyle.
+            </p>
+
+            <a href="#shop" class="shop-btn">
+                Shop Now
             </a>
 
-            <a href="#contact" class="btn secondary-btn">
-                Contact Me
-            </a>
+        </div>
+
+    </section>
+
+
+    <!-- SHOP -->
+
+    <section id="shop">
+
+        <h2>
+            Our Products
+        </h2>
+
+        <p class="section-description">
+            Discover our latest collection.
+        </p>
+
+
+        <div class="products">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    PRODUCT 01
+                </div>
+
+                <h3>
+                    Premium Black
+                </h3>
+
+                <p>
+                    Premium quality product.
+                </p>
+
+                <div class="price">
+                    ₹999
+                </div>
+
+                <button onclick="addToCart('Premium Black', 999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    PRODUCT 02
+                </div>
+
+                <h3>
+                    ZADY Classic
+                </h3>
+
+                <p>
+                    Simple. Clean. Stylish.
+                </p>
+
+                <div class="price">
+                    ₹1,499
+                </div>
+
+                <button onclick="addToCart('ZADY Classic', 1499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    PRODUCT 03
+                </div>
+
+                <h3>
+                    ZADY Premium
+                </h3>
+
+                <p>
+                    Designed for a premium experience.
+                </p>
+
+                <div class="price">
+                    ₹1,999
+                </div>
+
+                <button onclick="addToCart('ZADY Premium', 1999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
 
         </div>
 
@@ -424,194 +176,16 @@
 
     <section id="about">
 
-        <h2 class="section-title">
-            About <span>ZADY</span>
+        <h2>
+            About ZADY
         </h2>
 
         <div class="about">
 
             <p>
-                Hi, I'm Zady.
-                I'm interested in web development, design,
-                video editing, photography and creative content.
-                This website is a place where I can showcase
-                my skills, ideas and projects.
+                ZADY is a creative brand built with a passion
+                for design, technology and modern ideas.
             </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-
-    <section id="services">
-
-        <h2 class="section-title">
-            My <span>Services</span>
-        </h2>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icon">💻</div>
-
-                <h3>Web Development</h3>
-
-                <p>
-                    Modern and responsive websites
-                    for personal brands and businesses.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🎨</div>
-
-                <h3>Graphic Design</h3>
-
-                <p>
-                    Creative designs, posters,
-                    social media graphics and branding.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🎬</div>
-
-                <h3>Video Editing</h3>
-
-                <p>
-                    Reels, cinematic edits,
-                    promotional videos and creative content.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects">
-
-        <h2 class="section-title">
-            My <span>Projects</span>
-        </h2>
-
-        <div class="projects">
-
-            <div class="project">
-
-                <h3>Project 01</h3>
-
-                <p>
-                    Personal website designed and
-                    developed by Zady.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Project 02</h3>
-
-                <p>
-                    Creative social media content
-                    and video editing project.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Project 03</h3>
-
-                <p>
-                    Future web development project.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section>
-
-        <h2 class="section-title">
-            My <span>Skills</span>
-        </h2>
-
-        <div class="skills">
-
-            <div class="skill">
-
-                <div class="skill-name">
-                    <span>HTML</span>
-                    <span>80%</span>
-                </div>
-
-                <div class="bar">
-                    <div class="progress" style="width:80%"></div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-name">
-                    <span>CSS</span>
-                    <span>70%</span>
-                </div>
-
-                <div class="bar">
-                    <div class="progress" style="width:70%"></div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-name">
-                    <span>JavaScript</span>
-                    <span>50%</span>
-                </div>
-
-                <div class="bar">
-                    <div class="progress" style="width:50%"></div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-name">
-                    <span>Photoshop</span>
-                    <span>70%</span>
-                </div>
-
-                <div class="bar">
-                    <div class="progress" style="width:70%"></div>
-                </div>
-
-            </div>
 
         </div>
 
@@ -622,38 +196,29 @@
 
     <section id="contact">
 
-        <h2 class="section-title">
-            Contact <span>ZADY</span>
+        <h2>
+            Contact Us
         </h2>
 
         <div class="contact">
 
-            <p>
-                Have a project or idea?
-                Send me a message.
-            </p>
+            <input
+                type="text"
+                placeholder="Your Name"
+            >
 
-            <div class="contact-box">
+            <input
+                type="email"
+                placeholder="Your Email"
+            >
 
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                >
+            <textarea
+                placeholder="Your Message"
+            ></textarea>
 
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                >
-
-                <textarea
-                    placeholder="Your Message"
-                ></textarea>
-
-                <button onclick="sendMessage()">
-                    Send Message
-                </button>
-
-            </div>
+            <button onclick="sendMessage()">
+                Send Message
+            </button>
 
         </div>
 
@@ -664,26 +229,18 @@
 
     <footer>
 
-        © 2026 <span>ZADY</span>.
-        All Rights Reserved.
+        <p>
+            © 2026 <span>ZADY</span>.
+            All Rights Reserved.
+        </p>
 
     </footer>
 
 
     <!-- JAVASCRIPT -->
 
-    <script>
+    <script src="script.js"></script>
 
-        function sendMessage() {
-
-            alert(
-                "Thank you for contacting ZADY!"
-            );
-
-        }
-
-    </script>
-<script src="script.js"></script>
-    
 </body>
+
 </html>
